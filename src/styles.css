@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+body {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 15px;
+}
+
+#brand {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+#brand-logo {
+	width: 35px;
+	height: 35px;
+	object-fit: contain;
+	margin-bottom: 3px;
+}
+
+#brand-name {
+	font-family: "Anton", sans-serif;
+	margin: 0 0 0 5px;
+}
+
+#brand-name span {
+	color: goldenrod;
+}
+
+.navbar-nav-lg {
+	list-style: none;
+	flex-grow: 1;
+	text-align: end;
+	display: none;
+}
+
+.nav-item {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.nav-item:hover {
+	color: goldenrod;
+}
+
+.nav-item-lg {
+	display: inline-block;
+	margin-inline: 10px;
+}
+
+.nav-toggle {
+	flex-grow: 0;
+	flex-shrink: 0;
+	font-size: 25px;
+	margin: 0;
+	margin-left: 40px;
+	cursor: pointer;
+}
+
+.navbar-nav-sm {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 5px;
+	margin: 0;
+	list-style: none;
+}
+
+.nav-item-sm {
+	display: block;
+	margin-block: 10px;
+}
+
+@media (min-width: 690px) {
+	.navbar-nav-lg {
+		display: block;
+	}
+
+	.navbar-nav-sm {
+		display: none;
+	}
+
+	.navbar {
+		justify-content: center;
+	}
+}

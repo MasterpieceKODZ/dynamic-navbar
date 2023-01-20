@@ -7,11 +7,22 @@
 	font-family: sans-serif;
 }
 
+#root {
+	overflow-x: hidden;
+}
+
 .navbar-root {
 	position: absolute;
 	z-index: 9999;
 	background-color: transparent;
-	width: 100vw;
+	width: 100%;
+	transition: all 1s ease;
+	transition-delay: 0.3s;
+}
+
+.active,
+.open {
+	background-color: white;
 }
 
 .navbar {
@@ -74,14 +85,26 @@
 	margin: 0;
 	margin-left: 40px;
 	cursor: pointer;
+	transition: all 1s ease;
+}
+
+.open .nav-toggle {
+	transform: rotate(90deg);
 }
 
 .navbar-nav-sm {
-	display: none;
+	max-height: 0px;
+	display: grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 5px;
 	margin: 0;
 	list-style: none;
+	overflow: hidden;
+	transition: all 1s ease;
+}
+
+.open .navbar-nav-sm {
+	max-height: 80vh;
 }
 
 .nav-item-sm {
@@ -91,7 +114,7 @@
 
 .page-section {
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	overflow-x: hidden;
 }
 
@@ -154,7 +177,7 @@
 	width: 50%;
 	text-align: center;
 	position: absolute;
-	left: -12px;
+	left: -14px;
 }
 
 .section-title-container {
@@ -184,6 +207,11 @@
 
 	.navbar {
 		justify-content: center;
+	}
+
+	#intro-text {
+		font-size: 15px;
+		margin: 15px 20%;
 	}
 
 	.section-heading-container {

@@ -141,6 +141,38 @@
 	border: solid 2px darkgoldenrod;
 }
 
+.section-header {
+	height: 8vh;
+	background-color: rgb(22, 22, 22);
+	position: relative;
+}
+
+.section-heading-container {
+	background-color: darkgoldenrod;
+	transform: skewX(30deg);
+	height: 100%;
+	width: 50%;
+	text-align: center;
+	position: absolute;
+	left: -12px;
+}
+
+.section-title-container {
+	width: 100%;
+	height: 100%;
+	transform: skewX(-30deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-title {
+	font-family: "Aladin", cursive;
+	color: white;
+}
+
+/* ============================= Media Queries ========================================= */
+
 @media (min-width: 690px) {
 	.navbar-nav-lg {
 		display: block;
@@ -152,5 +184,9 @@
 
 	.navbar {
 		justify-content: center;
+	}
+
+	.section-heading-container {
+		width: 30%;
 	}
 }

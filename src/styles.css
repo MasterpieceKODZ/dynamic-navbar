@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aladin&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+#root {
+	overflow-x: hidden;
+}
+
+.navbar-root {
+	position: fixed;
+	z-index: 9999;
+	background-color: transparent;
+	width: 100%;
+	transition: all 1s ease;
+}
+
+.active,
+.open {
+	background-color: white;
+	box-shadow: 0px 2px 3px grey;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 15px;
+}
+
+#brand {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+#brand-logo {
+	width: 35px;
+	height: 35px;
+	object-fit: contain;
+	margin-bottom: 3px;
+}
+
+.brand-name {
+	font-family: "Anton", sans-serif;
+	margin: 0 0 0 5px;
+}
+
+.brand-name span {
+	font-family: inherit;
+	color: goldenrod;
+}
+
+.navbar-nav-lg {
+	list-style: none;
+	flex-grow: 1;
+	text-align: end;
+	display: none;
+}
+
+.nav-item {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.nav-item:hover {
+	color: goldenrod;
+}
+
+.nav-item-lg {
+	display: inline-block;
+	margin-inline: 10px;
+}
+
+.nav-toggle {
+	flex-grow: 0;
+	flex-shrink: 0;
+	font-size: 25px;
+	margin: 0;
+	margin-left: 40px;
+	cursor: pointer;
+	transition: all 1s ease;
+}
+
+.open .nav-toggle {
+	transform: rotate(90deg);
+}
+
+.navbar-nav-sm {
+	max-height: 0px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 5px;
+	margin: 0;
+	list-style: none;
+	overflow: hidden;
+	transition: all 0.5s ease;
+}
+
+.open .navbar-nav-sm {
+	max-height: 80vh;
+}
+
+.nav-item-sm {
+	display: block;
+	margin-block: 10px;
+}
+
+.page-section {
+	height: 100vh;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.home {
+	background: linear-gradient(
+			rgba(59, 50, 1, 0.4),
+			rgba(59, 50, 1, 0.8) 20%,
+			rgba(59, 50, 1, 0.8) 80%,
+			rgba(59, 50, 1, 0.4) 99%
+		),
+		url("../assest/hero.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+#bussiness-name {
+	font-family: "Aladin", cursive;
+	letter-spacing: 1px;
+	color: white;
+}
+
+#intro-text {
+	color: rgb(168, 168, 168);
+	font-size: 12px;
+	margin-block: 15px;
+}
+
+#btn-explore {
+	color: darkgoldenrod;
+	background-color: transparent;
+	border: solid 2px darkgoldenrod;
+	padding: 6px 20px;
+	font-weight: bold;
+	font-size: 15px;
+	margin-top: 10px;
+}
+
+#btn-explore:hover {
+	background-color: darkgoldenrod;
+	color: white;
+	border: solid 2px darkgoldenrod;
+}
+
+.section-header {
+	height: 8vh;
+	background-color: rgb(22, 22, 22);
+	position: relative;
+}
+
+.section-heading-container {
+	background-color: darkgoldenrod;
+	transform: skewX(30deg);
+	height: 100%;
+	width: 50%;
+	text-align: center;
+	position: absolute;
+	left: -14px;
+}
+
+.section-title-container {
+	width: 100%;
+	height: 100%;
+	transform: skewX(-30deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-title {
+	font-family: "Aladin", cursive;
+	color: white;
+}
+
+#footer {
+	background-color: black;
+	padding-top: 40px;
+	overflow: hidden;
+}
+
+#footer-links-container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+
+.footer-link {
+	text-align: center;
+	font-family: "Anton", sans-serif;
+	color: goldenrod;
+	margin: 10px;
+	cursor: pointer;
+}
+
+.footer-link:hover {
+	color: whitesmoke;
+}
+
+#footer-social-links {
+	max-width: max-content;
+	margin-inline: auto;
+	margin-bottom: 20px;
+}
+
+#footer-social-links a {
+	text-decoration: none;
+	margin: 5px 10px;
+	cursor: pointer;
+}
+
+#footer-social-links img {
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+}
+
+#copyright-text {
+	color: white;
+	margin-bottom: 50px;
+	text-align: center;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+#kodz {
+	color: goldenrod;
+	font-size: 15px;
+}
+
+/* ============================= Media Queries ========================================= */
+
+@media (min-width: 690px) {
+	.navbar-nav-lg {
+		display: block;
+	}
+
+	.navbar-nav-sm {
+		display: none;
+	}
+
+	.navbar {
+		justify-content: center;
+	}
+
+	#intro-text {
+		font-size: 15px;
+		margin: 15px 20%;
+	}
+
+	.section-heading-container {
+		width: 30%;
+	}
+
+	.nav-toggle {
+		display: none;
+	}
+}

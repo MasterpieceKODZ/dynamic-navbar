@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+
+		<meta
+			name="viewport"
+			content="width=device-width initial-scale=1.0" />
+
+		<title>Dynamic Navbar</title>
+
+		<link
+			rel="stylesheet"
+			href="./src/styles.css" />
+
+		<link
+			rel="stylesheet"
+			href="src/Font Awesome/css/all.css" />
+	</head>
+	<body>
+		<!-- Page Root -->
+		<div id="root">
+			<!-- Navbar -->
+			<div class="navbar-root">
+				<div class="navbar">
+					<!-- Brand -->
+					<div id="brand">
+						<img
+							src="./assest/logo.png"
+							alt="brand logo"
+							id="brand-logo" />
+						<p class="brand-name">MASTERPIECE<span>-KODZ</span></p>
+					</div>
+					<!-- Navbar Nav Wide Screen-->
+					<ul class="navbar-nav-lg">
+						<li
+							class="nav-item nav-item-lg"
+							data-toggles="home">
+							Home
+						</li>
+						<li
+							class="nav-item nav-item-lg"
+							data-toggles="portfolio">
+							Portfolio
+						</li>
+						<li
+							class="nav-item nav-item-lg"
+							data-toggles="projects">
+							Projects
+						</li>
+						<li
+							class="nav-item nav-item-lg"
+							data-toggles="contact">
+							Contact
+						</li>
+						<li
+							class="nav-item nav-item-lg"
+							data-toggles="blog">
+							Blog
+						</li>
+					</ul>
+					<p class="nav-toggle"><i class="fa-solid fa-bars"></i></p>
+				</div>
+				<!-- Navbar Nav Small Screen-->
+				<ul class="navbar-nav-sm">
+					<li
+						class="nav-item nav-item-sm"
+						data-toggles="home">
+						Home
+					</li>
+					<li
+						class="nav-item nav-item-sm"
+						data-toggles="portfolio">
+						Portfolio
+					</li>
+					<li
+						class="nav-item nav-item-sm"
+						data-toggles="projects">
+						Projects
+					</li>
+					<li
+						class="nav-item nav-item-sm"
+						data-toggles="contact">
+						Contact
+					</li>
+					<li
+						class="nav-item nav-item-sm"
+						data-toggles="blog">
+						Blog
+					</li>
+				</ul>
+			</div>
+			<!-- Home Section -->
+			<section class="home page-section">
+				<div>
+					<h2 id="bussiness-name">Express Tour</h2>
+					<p id="intro-text">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+						laborum quod nobis eveniet nemo et aut ad quos earum, in eius cum.
+						Dolorem unde maiores doloribus repellendus, sunt dolores architecto.
+					</p>
+					<button id="btn-explore">Explore</button>
+				</div>
+			</section>
+			<!-- Portfolio Section -->
+			<section class="portfolio page-section">
+				<div class="section-header">
+					<div class="section-heading-container">
+						<div class="section-title-container">
+							<h1 class="section-title">Portfolio</h1>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Projects Section -->
+			<section class="projects page-section">
+				<div class="section-header">
+					<div class="section-heading-container">
+						<div class="section-title-container">
+							<h1 class="section-title">Projects</h1>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Contact Section -->
+			<section class="contact page-section">
+				<div class="section-header">
+					<div class="section-heading-container">
+						<div class="section-title-container">
+							<h1 class="section-title">Contact</h1>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Blog Section -->
+			<section class="blog page-section">
+				<div class="section-header">
+					<div class="section-heading-container">
+						<div class="section-title-container">
+							<h1 class="section-title">Blog</h1>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Footer -->
+			<section id="footer">
+				<!-- Footer Links -->
+				<div id="footer-links-container">
+					<p
+						class="nav-item footer-link"
+						data-toggles="home">
+						Home
+					</p>
+					<p
+						class="nav-item footer-link"
+						data-toggles="portfolio">
+						Portfolio
+					</p>
+					<p
+						class="nav-item footer-link"
+						data-toggles="projects">
+						Projects
+					</p>
+					<p
+						class="nav-item footer-link"
+						data-toggles="contact">
+						Contact
+					</p>
+					<p
+						class="nav-item footer-link"
+						data-toggles="blog">
+						Blog
+					</p>
+				</div>
+				<!-- Footer Social Links -->
+				<div id="footer-social-links">
+					<!-- Facebook -->
+					<a href="www.facebook.com">
+						<img
+							src="./assest/facebook.png"
+							alt="facebook link icon" />
+					</a>
+					<!-- Twitter -->
+					<a href="www.twitter.com">
+						<img
+							src="./assest/twitter.png"
+							alt="twitter link icon" />
+					</a>
+					<!-- Instagram -->
+					<a href="www.instagram.com">
+						<img
+							src="./assest/instagram.png"
+							alt="instagram link icon" />
+					</a>
+					<!-- Youtube -->
+					<a href="www.youtube.com">
+						<img
+							src="./assest/youtube.png"
+							alt="youtube link icon" />
+					</a>
+					<!-- LinkedIn -->
+					<a href="www.linkedin.com">
+						<img
+							src="./assest/linkedin.png"
+							alt="linkedin link icon" />
+					</a>
+				</div>
+				<p id="copyright-text">
+					&copy;
+					<span
+						aria-live="assertive"
+						id="copyright-date"></span>
+					<span id="kodz"> M&spades;STERPIECE-KODZ</span>, all rights reserved
+				</p>
+			</section>
+		</div>
+
+		<script src="./src/index.js"></script>
+	</body>
+</html>
